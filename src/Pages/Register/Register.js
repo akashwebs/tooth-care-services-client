@@ -1,7 +1,8 @@
 import React from 'react';
 import { Button, Form } from 'react-bootstrap';
-import { useCreateUserWithEmailAndPassword } from 'react-firebase-hooks/auth';
+import { useCreateUserWithEmailAndPassword, useSendEmailVerification } from 'react-firebase-hooks/auth';
 import { useNavigate } from 'react-router-dom';
+import { toast, ToastContainer } from 'react-toastify';
 import auth from '../../Firebase/firebase.init';
 
 import SocialLogin from '../../Shared/SocialLogin/SocialLogin';
@@ -14,12 +15,15 @@ const Register = () => {
         loading,
         error,
       ] = useCreateUserWithEmailAndPassword(auth);
+      const [sendEmailVerification, sending, VerifyError] = useSendEmailVerification(auth);
 
-    const handleRegisterFrom=event=>{
+    const handleRegisterFrom=async event=>{
         event.preventDefault();
         const email=event.target.email.value;
         const password=event.target.password.value;
-        createUserWithEmailAndPassword(email,password)
+        await createUserWithEmailAndPassword(email,password)
+        await sendEmailVerification(auth);
+          toast('send a verify email')
     }
 
     return (
@@ -47,7 +51,6 @@ const Register = () => {
                         <Form.Control name='password' type="password" placeholder="Password" />
                     </Form.Group>
                     
-                    <button className='btn mb-2 btn-link text-decoration-none '>Forgot your password?</button>
                     <Button variant="primary" className='w-100 form-button d-block' type="submit">
                         Register
                     </Button>
@@ -55,6 +58,7 @@ const Register = () => {
                 </Form>
                 <SocialLogin></SocialLogin>
                 <p onClick={()=>navgiate('/login')} className='text-center'>Already a member? <span style={{cursor:'pointer'}} className='text-primary'>Login here</span></p>
+                <ToastContainer></ToastContainer>
             </div>
         </div>
     );

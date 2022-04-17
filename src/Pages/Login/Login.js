@@ -1,13 +1,13 @@
 import React from 'react';
 import { Button, Form } from 'react-bootstrap';
 import { useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
-import { useNavigate } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 import auth from '../../Firebase/firebase.init';
 import SocialLogin from '../../Shared/SocialLogin/SocialLogin';
 import './Login.css'
 
 const Login = () => {
-    const navgiate=useNavigate();
+    const navigate=useNavigate();
     const [
         signInWithEmailAndPassword,
         user,
@@ -15,13 +15,17 @@ const Login = () => {
         error,
       ] = useSignInWithEmailAndPassword(auth);
 
+      const location=useLocation();
+      let from = location.state?.from?.pathname || "/";
       const handleLogin=event=>{
           event.preventDefault();
           const email=event.target.email.value;
           const password=event.target.password.value;
           signInWithEmailAndPassword(email, password);
       }
-      
+      if(user){
+        navigate(from, { replace: true });
+      }
     return (
         <div className='container d-flex align-items-center ' style={{ height: '100vh ' }}>
             <div className='w-50 mx-auto p-4 form-section'>
@@ -40,14 +44,14 @@ const Login = () => {
                         <Form.Control name='password' type="password" placeholder="Password" />
                     </Form.Group>
                     
-                    <button className='btn mb-2 btn-link text-decoration-none '>Forgot your password?</button>
+                    <button onClick={()=>navigate('/resetpassword')} className='btn mb-2 btn-link text-decoration-none '>Forgot your password?</button>
                     <Button variant="primary" className='w-100 form-button d-block' type="submit">
                         login
                     </Button>
 
                 </Form>
                 <SocialLogin></SocialLogin>
-                <p className='text-center'>Don't have an account? <span onClick={()=>navgiate('/registration')} style={{cursor:'pointer'}} className='text-primary'>Register here</span></p>
+                <p className='text-center'>Don't have an account? <span onClick={()=>navigate('/registration')} style={{cursor:'pointer'}} className='text-primary'>Register here</span></p>
             </div>
         </div>
     );

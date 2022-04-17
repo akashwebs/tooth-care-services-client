@@ -1,9 +1,11 @@
 import React from 'react';
 import { Button, Form } from 'react-bootstrap';
+import { useNavigate } from 'react-router-dom';
 import SocialLogin from '../../Shared/SocialLogin/SocialLogin';
 import './Login.css'
 
 const Login = () => {
+    const navgiate=useNavigate()
     return (
         <div className='container d-flex align-items-center ' style={{ height: '100vh ' }}>
             <div className='w-50 mx-auto p-4 form-section'>
@@ -29,7 +31,7 @@ const Login = () => {
 
                 </Form>
                 <SocialLogin></SocialLogin>
-                <p className='text-center'>Don't have an account? <span className='text-primary'>Register here</span></p>
+                <p className='text-center'>Don't have an account? <span onClick={()=>navgiate('/registration')} style={{cursor:'pointer'}} className='text-primary'>Register here</span></p>
             </div>
         </div>
     );

@@ -1,0 +1,22 @@
+.banner-slider {
+    background: rgb(41, 146, 196);
+    background: linear-gradient(172deg, rgba(41, 146, 196, 1) 0%, rgba(89, 137, 185, 1) 54%, rgba(45, 75, 145, 1) 100%);
+}
+
+.banner-info {
+    padding: 25px;
+    background: rgba( 255, 255, 255, 0.15 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 3px );
+    -webkit-backdrop-filter: blur( 3px );
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    color: #fff;
+}
+.banner-button{
+   background: rgba(18, 51, 144, 1);
+   color: #fff;
+   display: block;
+   padding: 10px 25px;
+   font-size: 18px;
+}

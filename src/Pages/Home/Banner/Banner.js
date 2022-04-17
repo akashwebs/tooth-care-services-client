@@ -16,7 +16,7 @@ const Banner = () => {
                                     <p>Welcome to the Dentalcare</p>
                                     <h2 className='my-3 fs-1'>Your smiles with us</h2>
                                     <p>Explain to you how all this mistaken idea denouncing wasborn in our clinic you a complete.</p>
-                                    <button className='btn banner-button'>Book now</button>
+                                    <button className=' banner-button'>Book now</button>
                                 </div>
                             </Col>
                             <Col xs={6} md={5}>
@@ -35,7 +35,7 @@ const Banner = () => {
                 <Carousel.Item>
                     <Container>
                         <Row>
-                            <Col xs={12} md={5}>
+                            <Col xs={6} md={5}>
                             <div className=''>
                                     <img
                                         className="d-block img-fluid"
@@ -45,12 +45,12 @@ const Banner = () => {
                                 </div>
                                 
                             </Col>
-                            <Col xs={6} md={7} className='d-flex align-items-center'>
+                            <Col xs={12} md={7} className='d-flex align-items-center'>
                             <div className='banner-info'>
                                     <p>Welcome to my Tooth care</p>
                                     <h2 className='my-3 fs-1'>Quality & Affortable</h2>
                                     <p>Explain to you how all this mistaken idea denouncing wasborn in our clinic you a complete.</p>
-                                    <button className='btn banner-button'>Explore</button>
+                                    <button className=' banner-button'>Explore</button>
                                 </div>
                             </Col>
                         </Row>

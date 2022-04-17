@@ -7,13 +7,13 @@ const Login = () => {
     return (
         <div className='container d-flex align-items-center ' style={{ height: '100vh ' }}>
             <div className='w-50 mx-auto p-4 form-section'>
-                <h2>login</h2>
+                <h2 className='mt-5 mb-3'>Sign Into Your Account</h2>
                 <Form>
                     <Form.Group className="mb-3" controlId="formBasicEmail">
                         <Form.Label>Email address</Form.Label>
                         <Form.Control type="email" placeholder="Enter email" />
                         <Form.Text className="text-muted">
-                            We'll never share your email with anyone else.
+                           
                         </Form.Text>
                     </Form.Group>
 
@@ -21,14 +21,15 @@ const Login = () => {
                         <Form.Label>Password</Form.Label>
                         <Form.Control type="password" placeholder="Password" />
                     </Form.Group>
-                    <Form.Group className="mb-3" controlId="formBasicCheckbox">
-                        <Form.Check type="checkbox" label="Check me out" />
-                    </Form.Group>
+                    
+                    <button className='btn mb-2 btn-link text-decoration-none '>Forgot your password?</button>
                     <Button variant="primary" className='w-100 form-button d-block' type="submit">
                         login
                     </Button>
+
                 </Form>
                 <SocialLogin></SocialLogin>
+                <p className='text-center'>Don't have an account? <span className='text-primary'>Register here</span></p>
             </div>
         </div>
     );

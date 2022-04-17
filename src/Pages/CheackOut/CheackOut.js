@@ -11,13 +11,13 @@ const CheackOut = () => {
         <div className='container d-flex align-items-center ' style={{ height: '100vh ' }}>
             <div className=' mx-auto p-4 checkout-container'>
                 <div className=''>
-                    <h1>Make an Appointment</h1>
+                    <h1 className='my-4'>Make an Appointment</h1>
                     <div className=' w-50 '>
                         <div style={{ height: '2px' }} className='w-25 bg-primary'></div>
                     </div>
                 </div>
                 <p className='text-dark my-4'>We don’t want you to think what is the best for you. We know what it is and will make everything to help.</p>
-                <Form>
+                <Form className='appointment-container'>
                     <div className='d-flex'>
  
                             <input className='w-50 d-block me-2' type="text" name="yourName" id="" placeholder='Your Name' />
@@ -27,7 +27,7 @@ const CheackOut = () => {
                     <div className='d-flex my-3'>
  
                             <input className='w-50 d-block me-2' type="text" name="address" id="" placeholder='Full Address' />
-                            <input className='w-50 ms-2' type="email" name="Email" id="" placeholder='Your email' value={user?.email} />
+                            <input readOnly className='w-50 ms-2' type="email" name="Email" id="" placeholder='Your email' value={user?.email} />
                        
                     </div>
                     <div className='d-flex my-3'>
@@ -37,8 +37,8 @@ const CheackOut = () => {
                        
                     </div>
 
-                    <Button variant="primary" className='w-100 form-button d-block' type="submit">
-                        Send Me Email
+                    <Button variant="primary" className='w-100 form-button py-3 fs-5 d-block my-4' type="submit">
+                        Proccess Appointment
                     </Button>
 
                 </Form>

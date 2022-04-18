@@ -1,8 +1,8 @@
-import React, { useEffect, useState } from 'react';
-import { Button, Form, ToastContainer } from 'react-bootstrap';
+import React from 'react';
+import { Button, Form } from 'react-bootstrap';
 import { useSendPasswordResetEmail } from 'react-firebase-hooks/auth';
 import { useNavigate } from 'react-router-dom';
-import { toast } from 'react-toastify';
+import { toast, ToastContainer } from 'react-toastify';
 import auth from '../../Firebase/firebase.init';
 import SocialLogin from '../../Shared/SocialLogin/SocialLogin';
 
@@ -11,31 +11,27 @@ const ForgotPassword = () => {
         auth
     );
     const navgiate = useNavigate();
-    let errorMessage;
+    // let errorMessage;
 
-    const handleForgotPassowrd = async event => {
+    const handleForgotPassowrd = event => {
         event.preventDefault();
 
-        const email=event.target.email.value;
-        if(email){
-            await sendPasswordResetEmail(email)
-            toast('sent email')
-        }else{
-            toast('pelase enter your email address')
-        }
-       
-    }
-    if (error) {
-        errorMessage = error.message;
-        let splitMes = errorMessage.split('/')
-        const sliceMes = splitMes.slice(1)
-        const aginSplit = sliceMes[0].split(')')
-        const aginSplit2 = aginSplit[0].split('-')
-        const joinMsg = aginSplit2.join(' ')
-        errorMessage = <p className='text-danger'>{joinMsg}</p>;
+        sendPasswordResetEmail(event.target.email.value)
+        toast('sent email')
+
 
     }
-   
+    // if (error) {
+    //     errorMessage = error.message;
+    //     let splitMes = errorMessage.split('/')
+    //     const sliceMes = splitMes.slice(1)
+    //     const aginSplit = sliceMes[0].split(')')
+    //     const aginSplit2 = aginSplit[0].split('-')
+    //     const joinMsg = aginSplit2.join(' ')
+    //     errorMessage = <p className='text-danger'>{joinMsg}</p>;
+
+    // }
+
 
     return (
         <div className='container d-flex align-items-center ' style={{ padding: '70px 0' }}>
@@ -46,7 +42,7 @@ const ForgotPassword = () => {
                         <Form.Label>Email address</Form.Label>
                         <Form.Control name='email' type="email" placeholder="Enter email" required />
                         <Form.Text className="text-muted">
-                            {errorMessage}
+                            {error?.message}
                         </Form.Text>
                     </Form.Group>
 
@@ -58,7 +54,7 @@ const ForgotPassword = () => {
                 <SocialLogin></SocialLogin>
                 <p onClick={() => navgiate('/login')} className='text-center'>Already a member? <span style={{ cursor: 'pointer' }} className='text-primary'>Login here</span></p>
             </div>
-            <ToastContainer></ToastContainer>
+           <ToastContainer></ToastContainer>
         </div>
     );
 };

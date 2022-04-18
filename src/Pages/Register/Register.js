@@ -35,8 +35,8 @@ const Register = () => {
         return <Loading></Loading>
     }
     return (
-        <div className='container d-flex align-items-center ' style={{ height: '100vh ' }}>
-            <div className='w-50 mx-auto p-4 form-section'>
+        <div className='container d-flex align-items-center ' style={{ padding: '70px 0' }}>
+            <div className='mx-auto p-4 form-section'>
                 <h2 className='mt-5 mb-3'>Create An Cccount</h2>
                 <Form onSubmit={handleRegisterFrom}>
                     <Form.Group className="mb-3" controlId="formBasicEmail">

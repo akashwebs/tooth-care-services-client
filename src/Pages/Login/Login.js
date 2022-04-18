@@ -23,7 +23,7 @@ const Login = () => {
           const password=event.target.password.value;
           signInWithEmailAndPassword(email, password);
       }
-      
+
       let errorMessage;
       
       if(error){
@@ -40,8 +40,8 @@ const Login = () => {
         navigate(from, { replace: true });
       }
     return (
-        <div className='container d-flex align-items-center ' style={{ height: '100vh ' }}>
-            <div className='w-50 mx-auto p-4 form-section'>
+        <div className='container d-flex align-items-center ' style={{ padding: '70px 0' }}>
+            <div className='mx-auto p-4 form-section'>
                 <h2 className='mt-5 mb-3'>Sign Into Your Account</h2>
                 <Form onSubmit={handleLogin}>
                     <Form.Group className="mb-3" controlId="formBasicEmail">

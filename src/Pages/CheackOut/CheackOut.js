@@ -8,7 +8,7 @@ import './Cheackout.css'
 const CheackOut = () => {
     const [user]=useAuthState(auth);
     return (
-        <div className='container d-flex align-items-center ' style={{ height: '100vh ' }}>
+        <div className='container d-flex align-items-center ' style={{ padding: '70px 0 ' }}>
             <div className=' mx-auto p-4 checkout-container'>
                 <div className=''>
                     <h1 className='my-4'>Make an Appointment</h1>

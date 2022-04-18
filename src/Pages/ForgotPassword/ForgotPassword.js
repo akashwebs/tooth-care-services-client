@@ -38,8 +38,8 @@ const ForgotPassword = () => {
    
 
     return (
-        <div className='container d-flex align-items-center ' style={{ height: '100vh ' }}>
-            <div className='w-50 mx-auto p-4 form-section'>
+        <div className='container d-flex align-items-center ' style={{ padding: '70px 0' }}>
+            <div className=' mx-auto p-4 form-section'>
                 <h2 className='mt-5 mb-3'>Recover Your Password</h2>
                 <Form onSubmit={handleForgotPassowrd}>
                     <Form.Group className="mb-3" controlId="formBasicEmail">

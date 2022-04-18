@@ -36,12 +36,13 @@ const SocialLogin = () => {
     
     return (
         <div className='py-3'>
-            
+            {}
             <div className='text-center py-2'>
                 <button onClick={handleGoogle} className='login-social-wrap'><FaGoogle className='text-white'></FaGoogle></button>
                 <button onClick={handleFacebook} style={{background:'#3B589E'}}className='login-social-wrap'><FaFacebookF className='text-white'></FaFacebookF></button>
                 <button onClick={handleGithub} style={{background:'#111'}} className='login-social-wrap'><FaGithub className='text-white'></FaGithub></button>
             </div>
+            
         </div>
     );
 };

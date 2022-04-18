@@ -10,6 +10,7 @@ import ForgotPassword from './Pages/ForgotPassword/ForgotPassword';
 import RequireAuth from './Pages/RequireAuth/RequireAuth';
 import NotFound from './Pages/NotFound/NotFound';
 import Footer from './Shared/Footer/Footer';
+import About from './Pages/About/About';
 
 function App() {
   return (
@@ -27,6 +28,7 @@ function App() {
         <Route path='/registration' element={<Register></Register>}></Route>
         <Route path='/resetpassword' element={<ForgotPassword></ForgotPassword>}></Route>
         <Route path='*' element={<NotFound></NotFound>}></Route>
+        <Route path='/about' element={<About></About>}></Route>
       </Routes>
       <Footer></Footer>
     </div>

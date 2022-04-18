@@ -11,6 +11,10 @@ const About = () => {
             <h2 className='text-center my-5'>My About</h2>
             <Row xs={1} md={2} className="g-5 align-items-center">
                 <Col className='about-img'>
+                    <div className='my-info'>
+                    <h3>Akash Shil</h3>
+                    <p>Web Developer</p>
+                    </div>
                     <img className='img-fluid' src={aboutMe} alt="" />
                    
                         <FaTwitterSquare className='about-social fs-1 me-3' />

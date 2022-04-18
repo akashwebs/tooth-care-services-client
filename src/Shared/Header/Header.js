@@ -10,7 +10,7 @@ import './Header.css'
 const Header = () => {
     const [user, loading, error] = useAuthState(auth);
     return (
-        <Navbar collapseOnSelect expand="lg" className='navbar' variant="light">
+        <Navbar sticky='top' collapseOnSelect expand="lg" className='navbar' variant="light">
             <Container>
                 <Navbar.Brand as={Link} to="/">
                     <img className='nav-logo' src={logo} alt="" />
@@ -28,6 +28,9 @@ const Header = () => {
                         </Nav.Link>
                         <Nav.Link href='home#services'>
                             Services
+                        </Nav.Link>
+                        <Nav.Link as={Link} to='blog'>
+                            Blog
                         </Nav.Link>
                         <Nav.Link as={Link} to='about'>
                             About

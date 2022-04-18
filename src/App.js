@@ -11,6 +11,7 @@ import RequireAuth from './Pages/RequireAuth/RequireAuth';
 import NotFound from './Pages/NotFound/NotFound';
 import Footer from './Shared/Footer/Footer';
 import About from './Pages/About/About';
+import Blog from './Pages/Blog/Blog';
 
 function App() {
   return (
@@ -27,8 +28,9 @@ function App() {
         <Route path='/login' element={<Login></Login>}></Route>
         <Route path='/registration' element={<Register></Register>}></Route>
         <Route path='/resetpassword' element={<ForgotPassword></ForgotPassword>}></Route>
-        <Route path='*' element={<NotFound></NotFound>}></Route>
         <Route path='/about' element={<About></About>}></Route>
+        <Route path='/blog' element={<Blog></Blog>}></Route>
+        <Route path='*' element={<NotFound></NotFound>}></Route>
       </Routes>
       <Footer></Footer>
     </div>

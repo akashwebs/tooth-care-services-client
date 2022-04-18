@@ -42,7 +42,11 @@ const SocialLogin = () => {
                 <button onClick={handleFacebook} style={{background:'#3B589E'}}className='login-social-wrap'><FaFacebookF className='text-white'></FaFacebookF></button>
                 <button onClick={handleGithub} style={{background:'#111'}} className='login-social-wrap'><FaGithub className='text-white'></FaGithub></button>
             </div>
-            
+            <p className='text-danger text-center'>
+            {error?.message}
+            {gitError?.message}
+            {fbError?.message}
+            </p>
         </div>
     );
 };

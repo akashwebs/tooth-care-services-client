@@ -20,7 +20,7 @@ const Banner = () => {
                                 </div>
                             </Col>
                             <Col xs={6} md={5}>
-                                <div className=''>
+                                <div className='d-none d-sm-block'>
                                     <img
                                         className="d-block img-fluid"
                                         src={banner1}
@@ -36,7 +36,7 @@ const Banner = () => {
                     <Container>
                         <Row>
                             <Col xs={6} md={5}>
-                            <div className=''>
+                            <div className='d-none d-sm-block'>
                                     <img
                                         className="d-block img-fluid"
                                         src={banner2}

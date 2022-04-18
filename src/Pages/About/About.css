@@ -29,6 +29,11 @@
 .about-info{
     margin-left: 70px;
 }
+.my-info{
+    position: absolute;
+    bottom: 150px;
+    left: 70px;
+}
 @media only screen and (max-width: 600px) {
     .about-img{
      width: 90% !important;

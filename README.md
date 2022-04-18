@@ -1,13 +1,23 @@
-# tooth care
+# Tooth Care
 
-## Used Features
+# Live Link ['htts://www.live.com']
+
+## Fetures
+- slider
+- facebook login
+- google login
+- github login
+- manual login and Registration
+- Apoinment form
+
+## Used Technology
 
 - React Router
 - React Router
 - Carousel 
 - React Firebase Hooks
 - React Bootstrap
-- Firebase
+- Firebase Authentication
 - Not found image/404 page 
 - ES6 features
 

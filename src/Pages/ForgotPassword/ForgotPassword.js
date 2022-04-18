@@ -21,16 +21,7 @@ const ForgotPassword = () => {
 
 
     }
-    // if (error) {
-    //     errorMessage = error.message;
-    //     let splitMes = errorMessage.split('/')
-    //     const sliceMes = splitMes.slice(1)
-    //     const aginSplit = sliceMes[0].split(')')
-    //     const aginSplit2 = aginSplit[0].split('-')
-    //     const joinMsg = aginSplit2.join(' ')
-    //     errorMessage = <p className='text-danger'>{joinMsg}</p>;
-
-    // }
+  
 
 
     return (

@@ -23,6 +23,19 @@ const Login = () => {
           const password=event.target.password.value;
           signInWithEmailAndPassword(email, password);
       }
+      
+      let errorMessage;
+      
+      if(error){
+        errorMessage=error.message;
+        let splitMes=errorMessage.split('/')
+        const sliceMes=splitMes.slice(1)
+        const aginSplit= sliceMes[0].split(')')
+        const aginSplit2=aginSplit[0].split('-')
+        const joinMsg=aginSplit2.join(' ')
+        errorMessage=<p className='text-danger'>{joinMsg}</p>;
+      }
+     
       if(user){
         navigate(from, { replace: true });
       }
@@ -33,7 +46,7 @@ const Login = () => {
                 <Form onSubmit={handleLogin}>
                     <Form.Group className="mb-3" controlId="formBasicEmail">
                         <Form.Label>Email address</Form.Label>
-                        <Form.Control name='email' type="email" placeholder="Enter email" />
+                        <Form.Control name='email' type="email" placeholder="Enter email" required />
                         <Form.Text className="text-muted">
                            
                         </Form.Text>
@@ -41,10 +54,11 @@ const Login = () => {
 
                     <Form.Group className="mb-3" controlId="formBasicPassword">
                         <Form.Label>Password</Form.Label>
-                        <Form.Control name='password' type="password" placeholder="Password" />
+                        <Form.Control name='password' type="password" placeholder="Password" required/>
                     </Form.Group>
                     
                     <button onClick={()=>navigate('/resetpassword')} className='btn mb-2 btn-link text-decoration-none '>Forgot your password?</button>
+                    {errorMessage}
                     <Button variant="primary" className='w-100 form-button d-block' type="submit">
                         login
                     </Button>

@@ -19,7 +19,7 @@ const Services = () => {
                     <div style={{ height: '2px' }} className='w-25 mx-auto bg-primary'></div>
                 </div>
             </div>
-            <div>
+            <div  id='services'>
                 <Row xs={1} md={3} className="g-4 container mx-auto mt-3">
                     {
                         services.map(service => <Service 

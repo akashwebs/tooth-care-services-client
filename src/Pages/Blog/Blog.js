@@ -13,25 +13,42 @@ const Blog = () => {
                     </div>
                 </Col>
                 <Col >
-                <div className=' border p-4'>
+                    <div className=' border p-4'>
                         <h4>Why are you using firebase? What other options do you have to implement authentication?</h4>
                         <p className='m-0'>many types of benifits given firebase. this reason we are use firebasse. some reason bellow:</p>
-                        <ul >
-                            <li>Realtime Database</li>
-                            <li>Cloud Firestore</li>
-                            <li>Fast & Safe Hosting</li>
-                            <li>Provides A Free Start to Newbies</li>
-                            <li>Google Analytics</li>
-                            <li>Free Multi-Platform Firebase Authentication</li>
-                            <li>Firebase Testing Services to Improve App Quality</li>
-                        </ul>
-                        
+                        <p>
+                            Ans: Firebase Authentication provides backend services, easy-to-use SDKs, and ready-made UI libraries to authenticate users to your app. It supports authentication using passwords, phone numbers, popular federated identity providers like Google, Github, Apple, Microsoft, Yahoo, Facebook and Twitter, and more.
+                            <br></br>
+                            <br></br>
+                            Other options i have to implement cards, retina scans, voice recognition, and fingerprints for authentication
+                        </p>
+
+
+
+
+
                     </div>
                 </Col>
                 <Col>
-                <div className=' border p-4'>
+                    <div className=' border p-4'>
                         <h4>What other services does firebase provide other than authentication?</h4>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti, sequi dolorum. Repellat assumenda quo facere exercitationem optio laborum amet cupiditate, debitis, dignissimos soluta sed animi temporibus deserunt similique impedit inventore?</p>
+
+                        <p>
+                            There are many services which Firebase provides, Most useful of them are:
+                        </p>
+
+                        <ul>
+                            <li>Cloud Functions.</li>
+                            <li>Authentication.</li>
+                            <li>Hosting</li>
+                            <li>Cloud Storage.</li>
+                            <li>Google Analytics.</li>
+                            <li>Predictions.</li>
+                            <li>Cloud Messaging.</li>
+                        </ul>
+
+
+
                     </div>
                 </Col>
             </Row>
